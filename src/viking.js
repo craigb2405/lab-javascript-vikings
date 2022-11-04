@@ -65,15 +65,23 @@ class War {
     addSaxon(Saxon){
         this.saxonArmy.push(Saxon)
     }
-// struggled with this. Unsure how to call a method and apply it to an element of the array
+// struggled with this. Think I understand what needs to be done but unsure how to achieve it.
     vikingAttack(){
-       this.saxonArmy.Saxon.receiveDamage(this.vikingArmy.Viking.strength)      
+        let randomSaxon = saxonArmy[Math.floor(Math.random()*saxonArmy.length)];
+        let randomViking = vikingArmy[Math.floor(Math.random()*vikingArmy.length)];
+            
+       randomSaxon.receiveDamage(randomViking.strength)   
+          
     } 
-// struggled with this. Unsure how to call a method and apply it to an element of the array
+// struggled with this. Think I understand what needs to be done but unsure how to achieve it.
     saxonAttack (){
-        this.vikingArmy.viking.receiveDamage(this.saxonArmy.Saxon.strength) 
+        let randomSaxon = saxonArmy[Math.floor(Math.random()*saxonArmy.length)];
+        let randomViking = vikingArmy[Math.floor(Math.random()*vikingArmy.length)];
+            
+       randomViking.receiveDamage(randomSaxon.strength)  
     }
 
+    // Beleive this is the correct solution but it might not work as the previous vikingAttack and saxonAttack are not working.
     showStatus(){
         
         if (this.vikingArmy.length === 0){
